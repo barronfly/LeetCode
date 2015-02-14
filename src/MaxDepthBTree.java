@@ -28,6 +28,4 @@ public class MaxDepthBTree {
         int right_height = maxDepth(root.right);
         return (left_height > right_height) ? left_height+1 : right_height + 1;
     }
-    
-    
 }
