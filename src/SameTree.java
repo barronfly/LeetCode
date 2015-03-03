@@ -5,8 +5,8 @@ Two binary trees are considered equal if they are structurally identical
 and the nodes have the same value.
  */
 
-class SameTree {
-	public class TreeNode {
+public class SameTree {
+	class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;
