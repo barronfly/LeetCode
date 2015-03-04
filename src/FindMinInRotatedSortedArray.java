@@ -22,6 +22,10 @@ public class FindMinInRotatedSortedArray {
     	else return findMinValue(num, mid, end);
     }
     
+    // idea 2 : find the only number that is smaller than previous 
+    
+    // idea 3: non-recursive
+    
     public static void main(String[] args) {
     	int[] arr1 = {0,1,2,3,4,5};
     	int[] arr2 = {5,0,1,2,3,4};
