@@ -23,25 +23,28 @@ public class Solution {
     // Standard solution, not efficient
     // 递归地计算每个节点的左右子树深度，看其是否平衡。由于节点被重复访问，效率较低。
     // O(n^2) in worst case
-    // public boolean isBalanced(TreeNode root) {
-    //     if(root == null)
-    //         return true;
+    public boolean isBalanced(TreeNode root) {
+        if(root == null)
+            return true;
             
-    //     int lh = height(root.left);
-    //     int rh = height(root.right);
-    //     if(Math.abs(lh-rh) <=1 && isBalanced(root.left) && isBalanced(root.right))
-    //         return true;
+        int lh = height(root.left);
+        int rh = height(root.right);
+        if(Math.abs(lh-rh) <=1 && isBalanced(root.left) && isBalanced(root.right))
+            return true;
             
-    //     return false;
-    // }
+        return false;
+    }
     
-    // private int height(TreeNode root) {
-    //     if(root == null)
-    //         return 0;
+    private int height(TreeNode root) {
+        if(root == null)
+            return 0;
         
-    //     return 1 + Math.max(height(root.left), height(root.right));
-    // }
-    
+        return 1 + Math.max(height(root.left), height(root.right));
+    }
+
+
+
+	// O(n) 
     public boolean isBalanced(TreeNode root) {
         return maxDepth(root) != -1;
     }
