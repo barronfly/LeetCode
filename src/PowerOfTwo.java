@@ -1,3 +1,5 @@
+// Given an integer, write a function to determine if it is a power of two.
+
 public class Solution {
     // Consider case when n < 0
     public boolean isPowerOfTwo(int n) {
